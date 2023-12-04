@@ -93,8 +93,8 @@ return {
 						hidden = true,
 						grouped = true,
 						previewer = false,
-						initial_mode = "normal",
-						layout_config = { height = 40 },
+						initial_mode = "insert",
+						layout_config = { height = 30 },
 					})
 				end,
 				desc = "Open File Browser with the path of the current buffer",
@@ -108,11 +108,11 @@ return {
 			opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
 				wrap_results = true,
 				layout_strategy = "horizontal",
-				layout_config = { prompt_position = "top" },
-				sorting_strategy = "ascending",
+				layout_config = { prompt_position = "bottom" },
+				sorting_strategy = "descending",
 				winblend = 0,
 				mappings = {
-					n = {},
+          n = {}
 				},
 			})
 			opts.pickers = {
@@ -154,6 +154,10 @@ return {
 					},
 				},
 			}
+      opts.file_ignore_patterns = {
+        "node_modules",
+        ".git/"
+      },
 			telescope.setup(opts)
 			require("telescope").load_extension("fzf")
 			require("telescope").load_extension("file_browser")
