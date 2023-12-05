@@ -21,7 +21,7 @@ return {
         "golangci-lint",
         "golangci-lint-langserver",
         -- Proto
-        -- "bufls"
+        "buf-language-server"
       })
     end,
   },
