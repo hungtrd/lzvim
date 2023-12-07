@@ -94,7 +94,7 @@ return {
             hidden = true,
             grouped = true,
             previewer = false,
-            initial_mode = "insert",
+            initial_mode = "normal",
             layout_config = { height = 30 },
           })
         end,
