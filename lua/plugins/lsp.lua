@@ -10,6 +10,7 @@ return {
         "lua-language-server",
         "shellcheck",
         "shfmt",
+        -- Frontend
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
@@ -20,6 +21,7 @@ return {
         "goimports",
         "golangci-lint",
         "golangci-lint-langserver",
+        "templ",
         -- Proto
         "buf-language-server"
       })
