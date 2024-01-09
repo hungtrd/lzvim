@@ -15,6 +15,8 @@ return {
         "typescript-language-server",
         "css-lsp",
         "markdownlint",
+        "html-lsp",
+        "htmx-lsp",
         -- Golang
         "gopls",
         "gofumpt",
@@ -73,6 +75,16 @@ return {
             },
           },
         },
+        html = {
+          filetype = { "html", "templ" },
+        },
+        htmx = {
+          filetype = { "html", "templ" },
+        },
+        tailwindcss = {
+          filetype = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "templ" },
+          init_options = { userLanguages = { templ = "html" } },
+        },
       },
       setup = {
         gopls = function(_, opts)
@@ -95,6 +107,9 @@ return {
           end)
           -- end workaround
         end,
+        templ = function(_, opts) end,
+        html_lsp = function(_, opts) end,
+        htmx_lsp = function(_, opts) end,
       },
     },
   },
