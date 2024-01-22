@@ -156,10 +156,10 @@ return {
         },
       }
       opts.file_ignore_patterns = {
-            "node_modules",
-            ".git/"
-          },
-          telescope.setup(opts)
+        "node_modules",
+        ".git/"
+      }
+      telescope.setup(opts)
       require("telescope").load_extension("fzf")
       require("telescope").load_extension("file_browser")
     end,
