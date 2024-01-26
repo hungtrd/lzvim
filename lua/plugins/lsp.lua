@@ -24,6 +24,7 @@ return {
         "golangci-lint",
         "golangci-lint-langserver",
         "templ",
+        "iferr",
         -- Proto
         "buf-language-server"
       })
