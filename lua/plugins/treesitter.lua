@@ -4,30 +4,36 @@ return {
     opts = {
       ensure_installed = {
         "cmake",
-        "css",
         "gitignore",
         "graphql",
         "http",
-        "rust",
-        "scss",
-        "sql",
-        "bash",
-        "html",
-        "javascript",
-        "json",
-        "lua",
         "markdown",
         "markdown_inline",
-        "python",
         "query",
         "regex",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
-        "go",
-        "tsx",
+        -- shell
+        "bash",
         "fish",
+        -- vim
+        "vim",
+        "lua",
+        -- config
+        "yaml",
+        "json",
+        -- frontend
+        "typescript",
+        "tsx",
+        "javascript",
+        "html",
+        "css",
+        "scss",
+        -- backend
+        "rust",
+        "python",
+        "sql",
+        -- go
+        "go",
+        "templ"
       },
     },
     config = function(_, opts)

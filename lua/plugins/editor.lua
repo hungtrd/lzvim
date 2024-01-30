@@ -11,7 +11,7 @@ return {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     keys = {
-      { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+      { "<Tab>",   "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
     opts = {
@@ -32,15 +32,29 @@ return {
     -- stylua: ignore
     keys = {
       -- disable default
-      { "s", mode = { "n", "x", "o" }, false},
-      { "S", mode = { "n", "x", "o" }, false},
+      { "s",     mode = { "n", "x", "o" }, false },
+      { "S",     mode = { "n", "x", "o" }, false },
 
       -- enable
-      { "m", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-      { "M", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-      { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-      { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-      { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+      { "m",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+      { "M",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+      { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
+      { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+      { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
     },
-  }
+  },
+
+
+  {
+    "dinhhuy258/git.nvim",
+    event = "BufReadPre",
+    opts = {
+      keymaps = {
+        -- Open blame window
+        blame = "<Leader>gb",
+        -- Open file/folder in git repository
+        browse = "<Leader>go",
+      },
+    },
+  },
 }
