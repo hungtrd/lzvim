@@ -6,12 +6,11 @@ return {
     },
   },
 
-
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     keys = {
-      { "<Tab>",   "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+      { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
     opts = {
@@ -22,7 +21,6 @@ return {
       },
     },
   },
-
 
   {
     "folke/flash.nvim",
@@ -43,7 +41,6 @@ return {
       { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
     },
   },
-
 
   {
     "dinhhuy258/git.nvim",

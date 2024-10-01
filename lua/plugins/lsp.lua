@@ -26,13 +26,17 @@ return {
         "templ",
         "iferr",
         -- Proto
-        "buf-language-server"
+        "buf-language-server",
       })
     end,
   },
   {
     "neovim/nvim-lspconfig",
     opts = {
+      inlay_hints = {
+        enabled = false,
+        exclude = {}, -- filetypes for which you don't want to enable inlay hints
+      },
       servers = {
         gopls = {
           keys = {
