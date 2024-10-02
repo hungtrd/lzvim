@@ -3,3 +3,10 @@
 -- Add any additional options here
 
 vim.g.mapleader = ";"
+
+vim.filetype.add({
+  extension = {
+    templ = "templ",
+    psql = "sql",
+  },
+})

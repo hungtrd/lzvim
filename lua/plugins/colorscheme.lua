@@ -4,11 +4,10 @@ return {
   priority = 1000,
   opts = function()
     return {
-      transparent = false,
-      terminal_colors = true,
-      dim_inactive = false,
-      styles = {
-        comments = "italic",
+      options = {
+        styles = {
+          comments = "italic",
+        },
       },
     }
   end,
