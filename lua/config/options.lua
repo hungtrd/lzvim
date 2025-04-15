@@ -10,3 +10,5 @@ vim.filetype.add({
     psql = "sql",
   },
 })
+
+vim.g.lazyvim_picker = "telescope"
