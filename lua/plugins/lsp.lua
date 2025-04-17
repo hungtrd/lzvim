@@ -25,6 +25,7 @@ return {
         "golangci-lint-langserver",
         "templ",
         "iferr",
+        "go-debug-adapter",
         -- Proto
         "buf-language-server",
         -- Javascript, Typescript
