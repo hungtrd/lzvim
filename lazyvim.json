@@ -1,6 +1,7 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.test.core",
+    "lazyvim.plugins.extras.dap"
   ],
   "install_version": 7,
   "news": {
