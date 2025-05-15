@@ -195,6 +195,7 @@ return {
             },
           },
         },
+        jdtls = {},
       },
       setup = {
         gopls = function(_, opts)
@@ -231,6 +232,9 @@ return {
           return true
         end,
         vtsls = function(_, opts) end,
+        jdtls = function()
+          return true -- avoid duplicate servers
+        end,
       },
     },
   },
