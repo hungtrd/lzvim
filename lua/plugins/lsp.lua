@@ -85,7 +85,7 @@ return {
         },
         golangci_lint_ls = {
           cmd = { "golangci-lint-langserver" },
-          filetypes = { "go", "gomod" },
+          filetypes = { "go" },
           root_dir = require("lspconfig.util").root_pattern(".git", "go.mod"),
           init_options = {
             command = { "golangci-lint", "run", "--output.json.path", "stdout", "--show-stats=false" },
