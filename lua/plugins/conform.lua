@@ -38,6 +38,7 @@ return {
       ["nix"] = { "nixfmt" },
       ["markdown"] = { "prettier", "markdownlint-cli2", "markdown-toc" },
       ["markdown.mdx"] = { "prettier", "markdownlint-cli2", "markdown-toc" },
+      ["yaml"] = { "prettier" }
     }
   end,
 }
