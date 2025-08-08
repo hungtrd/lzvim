@@ -14,8 +14,7 @@ return {
         -- shell
         "bash",
         "fish",
-        "nixfmt",
-        "nixpks-fmt",
+        "nix",
         -- vim
         "vim",
         "lua",

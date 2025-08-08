@@ -27,8 +27,16 @@ return {
         "iferr",
         "delve",
         "go-debug-adapter",
-        -- Proto
+        -- proto
         "buf-language-server",
+        -- markdown
+        "prettier",
+        "markdownlint-cli2",
+        "markdown-toc",
+        -- nix
+        "nixpkgs-fmt",
+        "nixfmt",
+        "nil",
       })
     end,
   },
@@ -195,6 +203,7 @@ return {
           },
         },
         jdtls = {},
+        nil_ls = {},
       },
       setup = {
         gopls = function(_, opts)
