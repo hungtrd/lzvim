@@ -35,8 +35,8 @@ return {
         "markdown-toc",
         -- nix
         "nixpkgs-fmt",
-        "nixfmt",
-        "nil",
+        -- "nixfmt",
+        -- "nil",
       })
     end,
   },
@@ -203,7 +203,7 @@ return {
           },
         },
         jdtls = {},
-        nil_ls = {},
+        -- nil_ls = {},
       },
       setup = {
         gopls = function(_, opts)
