@@ -29,7 +29,6 @@ return {
         "go-debug-adapter",
         -- Proto
         "buf-language-server",
-        -- Javascript, Typescript
       })
     end,
   },

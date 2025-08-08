@@ -14,6 +14,8 @@ return {
         -- shell
         "bash",
         "fish",
+        "nixfmt",
+        "nixpks-fmt",
         -- vim
         "vim",
         "lua",
@@ -31,9 +33,8 @@ return {
         "rust",
         "python",
         "sql",
-        -- go
         "go",
-        "templ"
+        "templ",
       },
     },
     config = function(_, opts)
