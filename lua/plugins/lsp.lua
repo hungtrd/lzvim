@@ -16,7 +16,7 @@ return {
         "css-lsp",
         "markdownlint",
         "html-lsp",
-        "htmx-lsp",
+        -- "htmx-lsp",
         -- Golang
         "gopls",
         "gofumpt",
@@ -99,9 +99,6 @@ return {
           },
         },
         html = {
-          filetype = { "html", "templ" },
-        },
-        htmx = {
           filetype = { "html", "templ" },
         },
         tailwindcss = {
