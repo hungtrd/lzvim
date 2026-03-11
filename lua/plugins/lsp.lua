@@ -96,6 +96,7 @@ return {
           filetypes = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "templ" },
           init_options = { userLanguages = { templ = "html" } },
         },
+        tsp_server = {},
       },
       setup = {
         -- jdtls handled by lang.java extra (nvim-jdtls plugin)

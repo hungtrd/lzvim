@@ -21,6 +21,7 @@ return {
         -- config
         "yaml",
         "json",
+        "typespec",
         -- frontend
         "typescript",
         "tsx",
