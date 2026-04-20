@@ -96,6 +96,7 @@ return {
           filetypes = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "templ" },
           init_options = { userLanguages = { templ = "html" } },
         },
+        -- tsp_server root_markers overridden in ~/.config/nvim/lsp/tsp_server.lua
         tsp_server = {},
       },
       setup = {
