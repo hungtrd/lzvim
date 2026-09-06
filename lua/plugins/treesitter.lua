@@ -30,7 +30,6 @@ return {
         "css",
         "scss",
         -- backend
-        "rust",
         "python",
         "sql",
         "go",

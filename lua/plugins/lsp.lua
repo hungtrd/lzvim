@@ -58,12 +58,6 @@ return {
         -- tsp_server root_markers overridden in ~/.config/nvim/lsp/tsp_server.lua
         tsp_server = {},
       },
-      setup = {
-        -- jdtls handled by lang.java extra (nvim-jdtls plugin)
-        jdtls = function()
-          return true
-        end,
-      },
     },
   },
 }

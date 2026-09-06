@@ -9,6 +9,7 @@ This is a personal Neovim configuration built on [LazyVim](https://lazyvim.githu
 ## Code Style
 
 Lua files are formatted with **StyLua**:
+
 - Indent: 2 spaces
 - Column width: 120
 
@@ -19,23 +20,29 @@ Run formatting: `stylua lua/ lsp/` (the binary lives in Mason: `~/.local/share/n
 ## Architecture
 
 ### Entry Point
+
 `init.lua` → `lua/config/lazy.lua` (bootstraps lazy.nvim and loads all plugins)
 
 ### Config Layer (`lua/config/`)
+
 Loaded automatically by LazyVim in order:
+
 - `options.lua` — Vim options; sets `mapleader = ";"` and `lazyvim_picker = "snacks"`; registers `.templ` and `.psql` filetypes
 - `keymaps.lua` — Custom keymaps on top of LazyVim defaults
 - `autocmds.lua` — Empty; `.templ` formatting is handled by conform (see `lua/plugins/conform.lua`)
 - `lazy.lua` — Plugin manager setup; sets colorscheme to `nordfox`
 
 ### Native LSP Configs (`lsp/`)
+
 Per-server files consumed by Neovim's built-in `vim.lsp.config` (0.11+). Prefer this over
 `require("lspconfig")`, whose framework layer is deprecated and slated for removal:
+
 - `tsp_server.lua` — TypeSpec; `root_markers = { "tspconfig.yaml" }` only (not `.git`), so each
   project under `tsp/` gets its own LSP instance
 - `golangci_lint_ls.lua` — golangci-lint language server; `root_markers = { "go.mod", ".git" }`
 
 ### Plugin Overrides (`lua/plugins/`)
+
 Each file returns a lazy.nvim plugin spec that extends or overrides LazyVim defaults:
 
 - `lsp.lua` — Only what the `lang.go` extra does *not* provide: `<leader>td` gopls keymap,
@@ -52,14 +59,24 @@ Each file returns a lazy.nvim plugin spec that extends or overrides LazyVim defa
 - `markdown.lua` — markdownlint-cli2 config path
 
 ### LazyVim Extras (`lazyvim.json`)
+
 Enabled extras:
+
 - `ai.copilot` — GitHub Copilot
 - `dap.core`, `dap.nlua` — Debug Adapter Protocol
 - `lang.go` — gopls, delve, nvim-dap-go, neotest-golang, goimports/gofumpt
 - `lang.markdown` — Markdown language support
-- `lang.java` — Java via nvim-jdtls
+- `lang.rust` — rustaceanvim, crates.nvim, codelldb, neotest adapter
+- `lang.toml` — taplo LSP
 - `lang.typescript` — TypeScript support
 - `test.core` — neotest framework
+
+`lang.rust` uses **rustaceanvim**, not `nvim-lspconfig` — the extra sets
+`rust_analyzer = { enabled = false }` and rustaceanvim drives the server itself. It expects
+`rust-analyzer` on `PATH` and does **not** install it from Mason; get it with
+`rustup component add rust-analyzer`. Note that `~/.cargo/bin/rust-analyzer` exists as a rustup
+shim even when the component is missing, so `command -v` is not a reliable check — use
+`rustup component list --installed` or just run `rust-analyzer --version`.
 
 `editor.snacks_picker` is imported implicitly by `vim.g.lazyvim_picker = "snacks"`, so it is not
 listed in `lazyvim.json`. Leave `install_version` at `7` — bumping it to `8` flips the default
