@@ -1,8 +1,10 @@
 return {
   {
-    "rcarriga/nvim-notify",
+    "folke/snacks.nvim",
     opts = {
-      timeout = 10000,
+      notifier = {
+        timeout = 10000,
+      },
     },
   },
 
@@ -10,7 +12,7 @@ return {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     keys = {
-      { "<Tab>",   "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+      { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
     opts = {
@@ -48,19 +50,6 @@ return {
       filesystem = {
         -- bind_to_cwd = true,
         -- follow_current_file = { enabled = false },
-      },
-    },
-  },
-
-  {
-    "dinhhuy258/git.nvim",
-    event = "BufReadPre",
-    opts = {
-      keymaps = {
-        -- Open blame window
-        blame = "<Leader>gb",
-        -- Open file/folder in git repository
-        browse = "<Leader>go",
       },
     },
   },

@@ -1,5 +1,0 @@
-return {
-  {
-    "fredrikaverpil/neotest-golang",
-  },
-}

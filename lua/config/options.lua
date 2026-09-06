@@ -11,4 +11,4 @@ vim.filetype.add({
   },
 })
 
-vim.g.lazyvim_picker = "telescope"
+vim.g.lazyvim_picker = "snacks"
